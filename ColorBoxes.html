@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+    .box{
+
+        background-color: aqua;
+        height: 100px;
+        width: 100px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin:0px;
+
+     }
+     div 
+     {
+        border-width:5px;
+        border-style: solid;
+        border-color:black;
+
+     }
+
+     body
+     {
+         display:flex;
+         justify-content: center;
+        
+     }
+    
+
+     .container
+     {
+        display:flex;
+        width:480px;
+        height:480px;
+        flex-wrap:wrap;
+        position:relative;
+        justify-content: space-evenly;
+        padding-top: 10px;
+        background-color: pink;
+     }
+
+    </style>
+    <title>Boxes</title>
+</head>
+
+<h1>Killer Boxes '98</h1>
+
+
+
+<body>
+    <div class="container">
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+
+        <div class="box">
+        </div>
+        
+    </div>
+
+    <script>
+
+
+function random_color() {         
+    var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    var rand = colors[Math.floor(Math.random() * colors.length)];         
+    return rand;    
+ }     
+ 
+
+for (let i = 0; i < document.getElementsByClassName("box").length; i++)
+    {
+        document.getElementsByClassName("box")[i].onmouseover=function(){mouseOnTop()};
+       
+        function mouseOnTop(){ 
+        document.getElementsByClassName("box")[i].style.backgroundColor = random_color();
+       }
+    }
+
+    </script>
+</body>
+</html>
